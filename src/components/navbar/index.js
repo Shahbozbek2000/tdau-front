@@ -6,6 +6,8 @@ import {
    MobileIcon,
    NavMenu,
    NavContainer,
+   NavDropMenuWrapper,
+   NavDropMenu,
 } from "./style";
 import { Twirl as Hamburger } from "hamburger-react";
 // import "antd/dist/antd.css";
@@ -54,9 +56,18 @@ export function Navigator() {
                   />
                </MobileIcon>
                <NavMenu onClick={handleClick} click={click}>
-                  <NavLink href="#functions">
+                  <NavDropMenuWrapper >
                      <button className="nav-btn">University</button>
-                  </NavLink>
+                     <NavDropMenu>
+                        <li>Rector's Message</li>
+                        <li>Vision,Mission, Core Values</li>
+                        <li>Quality Policy and Objectives</li>
+                        <li>History of university</li>
+                        <li>University's structure</li>
+                        <li>Programmes</li>
+                        <li>Branches</li>
+                     </NavDropMenu>
+                  </NavDropMenuWrapper>
                   <NavLink href="#customers">
                      <button className="nav-btn">Interactive service</button>
                   </NavLink>

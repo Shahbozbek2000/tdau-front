@@ -112,7 +112,7 @@ export const MainLayoutProvider = styled.div`
   height: 110vh;
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0px 11.17px 27.93px #DFD9CE;
-  backdrop-filter: blur(250px);
+  /* backdrop-filter: blur(250px); */
   @media (max-width: 768px) {
     height: auto;
   }

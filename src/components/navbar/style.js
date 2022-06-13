@@ -9,7 +9,7 @@ export const Nav = styled.nav`
   width: 100%;
   margin: 0 auto;
   background:  ${props => props.pathName === '/about' ? 'rgba(255, 255, 255, 0.1);' : 'transparent'}; 
-  backdrop-filter: ${props => props.pathName === '/about' ? 'blur(150px)' : 'blur(0px)'};
+  /* backdrop-filter: ${props => props.pathName === '/about' ? 'blur(150px)' : 'blur(0px)'}; */
   font-family: "DM Sans", sans-serif;
   height: 96px;
   display: flex;
@@ -291,3 +291,80 @@ export const Language = styled.div`
   z-index: 2;
   font-size: 18.6px !important;
 `;
+
+// ==== Nav Drop Down Menu Style ====
+
+export const NavDropMenu = styled.ul`
+  position: absolute;
+  top: 100%;
+  display: none;
+  white-space: nowrap;
+  left: 0;
+  list-style-type: none;
+  padding: 1.2rem;
+  margin: 0;
+  z-index: 99999;
+  color: #142F38;
+  font-family: 'Poppins', "Inter";
+  text-align: start;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 23px;
+  /* opacity: 0.75; */
+  box-shadow: 0px 10px 25px #DFD9CE;
+  li {
+    font-weight: 700;
+    font-size: 16px;
+    width: 100%;
+  }
+  li:hover {
+    color: #000;
+  }
+`
+
+export const NavDropMenuWrapper = styled.span`
+position: relative;
+color: #142F38 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500 !important;
+  transition: 0.4s ease-in-out;
+  padding: 0 1rem;
+  height: 10%;
+  cursor: pointer;
+  &:hover ul {
+    display: inline-block;
+  }
+  &:after {
+      content: "";
+      position: absolute;
+      width: 0px;
+      height: 5px;
+      left: 50%;
+      bottom: 0;
+      background-color: ${systemColors.mainBlue};
+      transition: all ease-in-out 0.2s;
+    }
+    &:after:hover {
+      width: 100%;
+      left:0;
+    }
+  .nav-btn {
+    margin-top: 13px;
+    font-family: "DM Sans", sans-serif;
+    transition: all 0.5s;
+    background-color: transparent;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #142F38;
+    font-size: 16px;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+  @media (max-width: 960px) {
+    color: black;
+  }
+`
